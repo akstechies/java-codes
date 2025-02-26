@@ -1,0 +1,16 @@
+
+The error message ? automatedtesting [no test files] indicates that the go test command couldn't find any test files in your project directory.
+
+In Go, test files must meet the following requirements for go test to recognize them:
+
+Requirements for Go Test Files
+1. File Naming: Test files must end with _test.go (e.g., example_test.go).
+2. Function Naming: Test functions must start with Test.
+3. The function signature should be:
+    func TestXxx(t *testing.T) {
+        // test code
+    }
+where Xxx can be any descriptive name (e.g., TestAddition, TestAPI).
+
+4. Import testing: The testing package must be imported in the test file.
+5. In the Same Package: The test file should belong to the same package as the code it's testing.
